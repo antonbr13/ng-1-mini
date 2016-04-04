@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app='babies'>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body ng-controller='mainCtrl'>
+ <div ng-repeat='player in players'>
+   <strong>Player:</strong> {{player.name}}
+    <br>
+   <strong>League:</strong> {{player.league}}
+    <br>
+   <strong>Skill:</strong> {{player.skill}}
+
+   <br>
+   <br>
+
+  </div>
+
+   <form novalidate class="add-friends">
+    Name: <input type="text" ng-model="player.name"/><br><br>
+     League: <input type="text" ng-model="player.league"/><br><br>
+      Skill: <input type="text" ng-model="player.skill"/><br> <br>
+    <input type="submit" ng-click="addPlayer(player)" value="Add Player" />
+  </form>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+<script type="text/javascript" src='app.js'>
+
+</script>
+</body>
+</html>
